@@ -8,7 +8,6 @@ LOG_FILE="$SCRIPT_DIR/daily-report.log"
 echo "=== Northbeam Daily Report: $(date) ===" >> "$LOG_FILE"
 
 /opt/node22/bin/claude \
-  --dangerously-skip-permissions \
   -p "$(cat "$PROMPT_FILE")" \
   >> "$LOG_FILE" 2>&1
 
